@@ -1,5 +1,4 @@
-#9. Write a Selenium script that fills the form www.practiceselenium.com/practice-form.html and submits the page. After submitting , verify that the page navigates to home page
-
+# 10. Write a Selenium script that clicks the button “New Browser tab” on the form http://www.seleniumframework.com/Practiceform/ and prints the title of the page that opens in the new tab. Also verify that two windows are open and print the title of both the windows
 require 'rubygems'
 require 'watir'
 require 'rspec'
