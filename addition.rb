@@ -2,30 +2,30 @@
 
 #Feature:Addition of two numbers
 
-  #Scenario Outline: Add two numbers
-   # Given i take two numbers<num1> and <num2>
-   # When we add the two numbers
-    #Then the sum should be <output>
-    #Examples:
- #     | num1 | num2 | output |
- #     | 2    | 2    | 4      |
- #     | 9    | -1   | 8      |
- #     | -6   | 4    | -2     |
+  Scenario Outline: Add two numbers
+   Given i take two numbers<num1> and <num2>
+   When we add the two numbers
+    Then the sum should be <output>
+    Examples:
+     | num1 | num2 | output |
+     | 2    | 2    | 4      |
+     | 9    | -1   | 8      |
+     | -6   | 4    | -2     |
  
- #step_definitions
+ step_definitions
  
-# Given(/^i take two numbers(.*) and (.*)$/) do |num1, num2|
-#  @add1=AdditionOfTwoNumbers.new(num1,num2)
-# end
+Given(/^i take two numbers(.*) and (.*)$/) do |num1, num2|
+ @add1=AdditionOfTwoNumbers.new(num1,num2)
+end
 
-# When(/^we add the two numbers$/) do
-#  @sum=@add1.add_two_numbers()
-# end
+When(/^we add the two numbers$/) do
+ @sum=@add1.add_two_numbers()
+end
 
-# Then(/^the sum should be (.*)$/) do |output|
+Then(/^the sum should be (.*)$/) do |output|
 
- # expect(@sum).to eql(output.to_i)
-# end
+ expect(@sum).to eql(output.to_i)
+end
 
 class AdditionOfTwoNumbers
 
